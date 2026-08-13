@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Health Check</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0fdf4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 45px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .icon {
+            font-size: 70px;
+        }
+        
+        h1 {
+            color: #15803d;
+        }
+        
+        .status {
+            display: inline-block;
+            background: #dcfce7;
+            color: #15803d;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 15px;
+        }
+        
+        .info {
+            text-align: left;
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .info p {
+            margin: 12px 0;
+        }
+        
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: #232f3e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icon">❤️</div>
+
+        <h1>Application Health</h1>
+
+        <div class="status">
+            🟢 HEALTHY
+        </div>
+
+        <p>
+            The Flask application is responding normally.
+        </p>
+
+        <div class="info">
+
+            <p><strong>Service:</strong> Flask Monitoring Application</p>
+
+            <p><strong>Status:</strong> Operational</p>
+
+            <p><strong>HTTP Response:</strong> 200 OK</p>
+
+            <p><strong>Checked At:</strong> {{ timestamp }}</p>
+
+        </div>
+
+        <a href="/" class="back">
+        ← Back to Dashboard
+    </a>
+
+    </div>
+
+</body>
+
+</html>

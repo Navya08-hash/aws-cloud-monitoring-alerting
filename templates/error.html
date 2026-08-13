@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Error Test</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fef2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 45px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .icon {
+            font-size: 70px;
+        }
+        
+        h1 {
+            color: #dc2626;
+        }
+        
+        .status {
+            display: inline-block;
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 15px;
+        }
+        
+        .info {
+            text-align: left;
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .warning {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff7ed;
+            border-radius: 8px;
+            color: #9a3412;
+        }
+        
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: #232f3e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icon">🚨</div>
+
+        <h1>Test Error Generated</h1>
+
+        <div class="status">
+            🔴 ERROR EVENT
+        </div>
+
+        <p>
+            A test application error was intentionally generated.
+        </p>
+
+        <div class="info">
+
+            <p><strong>Service:</strong> Flask Monitoring Application</p>
+
+            <p><strong>Event:</strong> Test Application Error</p>
+
+            <p><strong>Time:</strong> {{ timestamp }}</p>
+
+            <p><strong>Monitoring:</strong> CloudWatch Logs</p>
+
+        </div>
+
+        <div class="warning">
+            This error is intentional and is used to test the application's monitoring and logging system.
+        </div>
+
+        <a href="/" class="back">
+        ← Back to Dashboard
+    </a>
+
+    </div>
+
+</body>
+
+</html>

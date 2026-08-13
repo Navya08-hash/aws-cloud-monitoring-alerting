@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Monitoring Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+        
+        header {
+            background: #232f3e;
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+        
+        header p {
+            margin: 0;
+            color: #d1d5db;
+        }
+        
+        .container {
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .status {
+            background: white;
+            border-radius: 14px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+        
+        .status-icon {
+            font-size: 45px;
+        }
+        
+        .healthy {
+            color: #15803d;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card-icon {
+            font-size: 32px;
+        }
+        
+        .card h3 {
+            margin-bottom: 8px;
+        }
+        
+        .card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        .testing {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            margin-top: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .buttons {
+            margin-top: 20px;
+        }
+        
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 13px 20px;
+            margin: 7px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .health {
+            background: #15803d;
+        }
+        
+        .error {
+            background: #dc2626;
+        }
+        
+        .load {
+            background: #ea580c;
+        }
+        
+        footer {
+            text-align: center;
+            color: #6b7280;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>☁️ AWS Cloud Monitoring</h1>
+        <p>Infrastructure Monitoring & Automated Alerting System</p>
+    </header>
+
+    <div class="container">
+
+        <div class="status">
+            <div class="status-icon">🟢</div>
+            <h2>Application Status</h2>
+            <div class="healthy">OPERATIONAL</div>
+            <p>Flask monitoring application is running successfully.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🖥️</div>
+                <h3>Infrastructure</h3>
+                <p>
+                    Application will run on an Amazon EC2 Linux server.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Monitoring</h3>
+                <p>
+                    Amazon CloudWatch monitors infrastructure metrics and logs.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚨</div>
+                <h3>Alerting</h3>
+                <p>
+                    CloudWatch alarms detect abnormal conditions.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📧</div>
+                <h3>Notifications</h3>
+                <p>
+                    Amazon SNS sends automated email notifications.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="testing">
+
+            <h2>🧪 Monitoring Tests</h2>
+
+            <p>
+                Use these pages to test the application's monitoring capabilities.
+            </p>
+
+            <div class="buttons">
+
+                <a href="/health" class="button health">
+                ❤️ Health Check
+            </a>
+
+                <a href="/error" class="button error">
+                🚨 Error Test
+            </a>
+
+                <a href="/load" class="button load">
+                ⚡ CPU Load Test
+            </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        AWS Infrastructure Monitoring & Automated Alerting System
+    </footer>
+
+</body>
+
+</html>
